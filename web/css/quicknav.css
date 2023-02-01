@@ -1,0 +1,139 @@
+:root {
+  --blue-primary: #185abc;
+  --blue-light: #e8f0fe;
+  --black-text: rgba(0,0,0,.72);
+}
+
+body {
+  font-size: 13px;
+  color: var(--black-text);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+#loading-image {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 1rem;
+}
+#loading-image.show {
+  display: block;
+}
+.table-outer {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+table#static-view td,
+table#static-view th {
+  padding: .5rem;
+}
+
+/* sorting icon */
+table#static-view th span:hover{
+  cursor: pointer;
+  color: var(--blue-primary);
+}
+
+table#static-view a{
+  color: inherit;
+  text-decoration: none;
+}
+table#static-view tbody tr.sv__item-wrapper {
+  border-top: 1px solid gainsboro;
+}
+table#static-view tbody tr.sv__item-wrapper.active{
+  background-color: var(--blue-light);
+  color: var(--blue-primary);
+  cursor: pointer;
+}
+
+table#static-view tbody tr.sv__item-wrapper:hover{
+  cursor: pointer;
+}
+
+table#static-view td{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+table#static-view td:nth-child(1){
+  font-weight: 500;
+}
+.ul-outer {
+  width: 100%;
+  overflow-x: auto;
+}
+ul#adaptive-view {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+  /* width: 100vw;
+  overflow-x: scroll; */
+}
+ul#adaptive-view li {
+  /* padding: .25rem; */
+  font-weight: 500;
+}
+.shortcuts__item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 1rem; */
+}
+
+.shortcuts__item-child {
+  /* width: 200px; */
+  padding: .25rem .5rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.shortcuts__item-child span {
+  display: inline-block;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.shortcuts__item-child:hover {
+  cursor: pointer;
+  background-color: var(--blue-light);
+  color: var(--blue-primary);
+}
+.shortcuts__item-child img {
+  width: 1.25rem;
+  height: 1.25rem;;
+}
+
+.arrow-right {
+  margin: 0 .5rem;
+}
+
+.breadcrumb {
+  font-size: 1rem;
+}
+.breadcrumb__text {
+  text-decoration: none;
+  color: var(--black-text)
+}
+.breadcrumb__text:hover {
+  cursor: pointer;
+  color: var(--blue-primary);
+}
+
+.button-icon {
+
+}
